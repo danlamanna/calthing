@@ -1,0 +1,17 @@
+[project]
+name = "calthing"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "click>=8.0",
+    "icalendar>=7.1.0",
+    "requests>=2.34.0",
+    "xdg-base-dirs>=6.0.2",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.3",
+]
