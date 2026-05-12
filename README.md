@@ -8,23 +8,18 @@ Imports are snapshots. Events canceled or declined after an import stay in Outlo
 
 ## Setup
 
-Install dependencies:
-
-```
-uv sync
-```
-
 Create a config file at `~/.config/calthing/config.toml`:
 
 ```toml
 keychain_service = "gcal-ics-url"
 my_emails = ["you@example.com"]
+ignore_summaries = ["All Hands", "Team Standup"]
 ```
 
 Store your Google Calendar secret iCal URL (from Calendar Settings → Integrate calendar → Secret address in iCal format) in the keychain:
 
 ```
-security add-generic-password -s "gcal-ics-url" -a "$(whoami)" -w "<your iCal URL>"
+security add-generic-password -T "" -s "gcal-ics-url" -a "$(whoami)" -w "<your iCal URL>"
 ```
 
 ## Usage
